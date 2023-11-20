@@ -109,4 +109,5 @@ Route::get('/prodi/all-join-facade', [ProdiController::class, 'allJoinFacade']);
 Route::get('/prodi/create', [ProdiController::class, 'create']);
 
 Route::post('/prodi/store', [ProdiController::class, 'store']);
-
+Route::get('/prodi', [ProdiController::class, 'index'])->name('prodi.index');
+Route::get('/prodi/{prodi}', [ProdiController::class, 'show'])->name('prodi.show');

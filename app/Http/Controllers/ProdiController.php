@@ -49,4 +49,14 @@ class ProdiController extends Controller
        $request->session()->flash('info',"data prodi $prodi->nama berhasil disimpan ke database");
        return redirect()->route('prdi.create');
     }
+
+    public function index()
+    {
+    $prodis = Prodi::all();
+    return view('prodi.index')-> with ('prodis',$prodis);
+    }
+    public function show(Prodi $prodi)
+    {
+        return view('prodi.show',['prodi'=>$prodi]);
+    }
 }

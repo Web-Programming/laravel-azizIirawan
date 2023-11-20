@@ -8,12 +8,10 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <h1>{{ $kampus }}</h1>
-    <hr>
-
+   <div class="container">
     @yield('content')
-
     <hr>
     &copy; {{date('Y')}} Universitas Multi Data Palembang
+   </div>
 </body>
 </html>
